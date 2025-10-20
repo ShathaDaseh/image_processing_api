@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../index'; // أو الملف الرئيسي اللي فيه Express app عندك
+import app from '../index';
 
 describe('Images API', () => {
   it('should return 200 OK for GET /', async () => {

@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { processImage } from '../utils/imageProcessor';
+import { processImage } from '../utils/imageProcessor.js';
 
 const router = express.Router();
 

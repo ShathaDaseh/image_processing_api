@@ -1,22 +1,16 @@
 {
   "name": "image_prossising_api",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/server.js",
   "scripts": {
     "clean": "rimraf dist",
-    "prestart": "npm run build",
     "build": "tsc",
-    "dev": "ts-node src/server.ts",
-    "start": "node dist/server.js",
+    "start": "npm run build && node dist/server.js",
+    "dev": "tsc && node dist/server.js",
     "test": "ts-node node_modules/jasmine/bin/jasmine.js",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "sharp": "^0.34.4"
