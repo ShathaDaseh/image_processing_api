@@ -1,5 +1,5 @@
 import express, { Application } from 'express';
-import imagesRouter from './routes/images.js';
+import imagesRouter from './routes/images';
 import path from 'path';
 
 const app: Application = express();
@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use('/api/images', imagesRouter);
 
 app.get('/', (_req, res) => {
-  res.send('Image Processing API is running');
+  res.json({ message: 'Image Processing API is running' });
 });
 
 app.use('/thumbs', express.static(path.join(process.cwd(), 'images', 'thumb')));

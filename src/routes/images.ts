@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { processImage } from '../utils/imageProcessor.js';
+import { processImage } from '../utils/imageProcessor';
 
 const router = express.Router();
 
@@ -8,7 +8,6 @@ router.get('/', async (req: Request, res: Response) => {
   const widthRaw = req.query.width;
   const heightRaw = req.query.height;
 
-  // validation
   if (!filename) {
     return res.status(400).json({ error: 'Missing filename parameter' });
   }
